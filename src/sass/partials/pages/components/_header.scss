@@ -1,0 +1,53 @@
+@use "sass:math";
+@use "../../variables" as v;
+.header{
+    min-height: 100vh;
+    background: #485563;
+    background: linear-gradient(to bottom, #485563, #29323c);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__contents{
+        margin: math.div(20, 16)*1em;
+        text-align: center;
+        color: #fff;
+        visibility: hidden;
+        @include v.view(md-up){
+            text-align: left;
+        }
+    }
+    &__fancy{
+        color: #6deed8;
+    }
+    .scroll-to-ct{
+        visibility: hidden;
+        .scroll-bt{
+            border: 2px solid #fff;
+            background: transparent;
+            color: #fff;
+            padding: math.div(10,28)*1em math.div(20,28)*1em;
+            transition: all .3s ease-in-out;
+            cursor: pointer;
+            .bt-text{
+                position: relative;
+                // &::after{
+                //     content: '';
+                //     width: math.div(20,28)*1em;
+                //     height: math.div(20,28)*1em;
+                //     position: relative;
+                //     display: block;
+                //     background-image: url(../img/arrow-right.svg);
+                //     background-position: center;
+                //     background-repeat: no-repeat;
+                // }
+
+            }
+            &:hover, &:focus{
+                border: 2px solid rgba(109, 238, 216, .7);
+                background-color: rgba(109, 238, 216, .7);
+            }
+        }
+
+    }
+}
