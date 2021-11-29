@@ -1,0 +1,31 @@
+@use  "../variables" as v;
+@use  "sass:math";
+.projects-section{
+    display: grid;
+    grid-template-columns: 1fr Min(1600px, 90%) 1fr;
+    background-color: v.$primaryBlueDark;
+    color: #fff;
+    border-top: 2px solid v.$primaryBlueGrey;
+    padding: Min(75px, Max(40px, math.div(75,1920)*100vw)) 0;
+    .my-projects{
+        grid-column: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin-bottom: math.div(75, 45)*1em;
+        }
+    }
+}
+.projects-container{
+    //grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-auto-flow: row;
+    @include v.view(md-up){
+        grid-template-columns: repeat(2, auto);
+    }
+    @include v.view(xl){
+        grid-template-columns: repeat(3, auto);
+    }
+}

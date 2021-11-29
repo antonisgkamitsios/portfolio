@@ -108,9 +108,9 @@ p, .p {
 .header {
   min-height: 100vh;
   background: #485563;
-  background: -webkit-gradient(linear, left top, left bottom, from(#485563), to(#29323c));
-  background: -o-linear-gradient(top, #485563, #29323c);
-  background: linear-gradient(to bottom, #485563, #29323c);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1f2833), to(#0b0c10));
+  background: -o-linear-gradient(top, #1f2833, #0b0c10);
+  background: linear-gradient(to bottom, #1f2833, #0b0c10);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,26 +137,68 @@ p, .p {
   }
 }
 .header__fancy {
-  color: #6deed8;
+  color: #66fcf1;
 }
 .header .scroll-to-ct {
   visibility: hidden;
 }
 .header .scroll-to-ct .scroll-bt {
-  border: 2px solid #fff;
+  border: 2px solid #66fcf1;
   background: transparent;
   color: #fff;
   padding: 0.3571428571em 0.7142857143em;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .header .scroll-to-ct .scroll-bt .bt-text {
   position: relative;
 }
 .header .scroll-to-ct .scroll-bt:hover, .header .scroll-to-ct .scroll-bt:focus {
-  border: 2px solid rgba(109, 238, 216, 0.7);
-  background-color: rgba(109, 238, 216, 0.7);
+  border-color: #45a29e;
+  background-color: #45a29e;
+}
+
+.projects-section {
+  display: grid;
+  grid-template-columns: 1fr min(1600px, 90%) 1fr;
+  background-color: #0b0c10;
+  color: #fff;
+  border-top: 2px solid #45a29e;
+  padding: min(75px, max(40px, 3.90625vw)) 0;
+}
+.projects-section .my-projects {
+  grid-column: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.projects-section .my-projects h2 {
+  margin-bottom: 1.6666666667em;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-auto-flow: row;
+}
+@media only screen and (min-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .projects-container {
+    grid-template-columns: repeat(3, auto);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

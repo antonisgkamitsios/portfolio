@@ -3,7 +3,7 @@
 .header{
     min-height: 100vh;
     background: #485563;
-    background: linear-gradient(to bottom, #485563, #29323c);
+    background: linear-gradient(to bottom, v.$primaryBlue, v.$primaryBlueDark);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,12 +18,13 @@
         }
     }
     &__fancy{
-        color: #6deed8;
+        //color: #6deed8;
+        color: v.$primaryBlueLight
     }
     .scroll-to-ct{
         visibility: hidden;
         .scroll-bt{
-            border: 2px solid #fff;
+            border: 2px solid v.$primaryBlueLight;
             background: transparent;
             color: #fff;
             padding: math.div(10,28)*1em math.div(20,28)*1em;
@@ -44,8 +45,8 @@
 
             }
             &:hover, &:focus{
-                border: 2px solid rgba(109, 238, 216, .7);
-                background-color: rgba(109, 238, 216, .7);
+                border-color: v.$primaryBlueGrey;
+                background-color: v.$primaryBlueGrey;
             }
         }
 

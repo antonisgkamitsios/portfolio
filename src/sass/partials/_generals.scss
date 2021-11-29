@@ -1,8 +1,6 @@
 @use 'sass:math';
 @use './variables' as v;
-body{
-    //font-family: 'Nunito', sans-serif;
-}
+
 @for $i from 1 through 6{
     h#{$i}, .h#{$i}{
         @extend %nunito_bold_700;
