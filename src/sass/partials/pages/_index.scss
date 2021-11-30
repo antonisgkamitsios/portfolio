@@ -33,6 +33,13 @@
         border-radius: 10px;
         overflow: hidden;
         position: relative;
+        pointer-events: none;
+        &.hover{
+            pointer-events: all;
+        }
+        a{
+            display: block;
+        }
         .project-desc{
              
             display: flex;

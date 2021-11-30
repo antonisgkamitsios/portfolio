@@ -205,6 +205,13 @@ p, .p {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  pointer-events: none;
+}
+.projects-container .project-card.hover {
+  pointer-events: all;
+}
+.projects-container .project-card a {
+  display: block;
 }
 .projects-container .project-card .project-desc {
   display: -webkit-box;
