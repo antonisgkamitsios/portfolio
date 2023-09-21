@@ -13,6 +13,9 @@ h1, .h1{
 h2, .h2{
     font-size: Min(math.div(45,16)*1rem, Max(math.div(24,16)*1rem, math.div(45,1600)*100vw));
 }
+h3, .h3{
+    font-size: Min(math.div(30,16)*1rem, Max(math.div(18,16)*1rem, math.div(30,1600)*100vw));
+}
 .normal-text-large{
     @extend %nunito_regular_400;
     font-size: Min(math.div(28,16)*1rem, Max(math.div(18,16)*1rem, math.div(28,1600)*100vw)); 

@@ -9,6 +9,21 @@
     border-top: 2px solid v.$primaryBlueGrey;
     padding: Min(75px, Max(40px, math.div(75, 1920)*100vw)) 0;
 
+    .projects-description {
+        margin-bottom: math.div(48, 16)*1em;
+        text-align: left;
+        max-width: 800px;
+        width: 100%;
+
+        h3 {
+            margin-bottom: math.div(20, 30)*1em;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: math.div(20, 18)*1em;
+        }
+    }
+
     .my-projects {
         grid-column: 2;
         display: flex;
@@ -16,7 +31,7 @@
         align-items: center;
 
         h2 {
-            margin-bottom: math.div(75, 45)*1em;
+            margin-bottom: math.div(24, 45)*1em;
         }
     }
 }
@@ -28,14 +43,22 @@
     grid-auto-flow: row;
     grid-gap: 25px;
     grid-auto-rows: 1fr;
-    grid-template-rows: repeat((auto, 260px));
+    grid-template-rows: repeat(auto, 260px);
+
+    &>div {
+
+        &:only-child,
+        &:last-child:nth-child(even) {
+            grid-column-start: 2;
+        }
+    }
 
     @include v.view(md-up) {
         grid-template-columns: repeat(2, auto);
     }
 
     @include v.view(xl) {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .project-card {
@@ -43,7 +66,7 @@
         overflow: hidden;
         position: relative;
         pointer-events: none;
-
+        box-shadow: 0px 0px 11px 11px rgb(0 0 0 / 53%);
 
         &.hover {
             pointer-events: all;

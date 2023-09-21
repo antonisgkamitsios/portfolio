@@ -15,16 +15,28 @@
         text-align: center;
         color: #fff;
         visibility: hidden;
+        max-width: 1300px;
 
-        @include v.view(md-up) {
-            text-align: left;
-        }
+
+
+
     }
+
 
     &__fancy {
         //color: #6deed8;
         color: v.$primaryBlueLight
     }
+
+    &__wave {
+        display: inline-block
+    }
+
+
+    .sub {
+        margin-top: Min(math.div(20, 16) * 1em, Max(math.div(10, 16)*1rem, math.div(20, 1600)*100vw));
+    }
+
 
     .scroll-to-ct {
         visibility: hidden;

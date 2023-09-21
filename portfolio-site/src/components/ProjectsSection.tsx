@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import ProjectsContainer from './ProjectsContainer';
 import { Project } from '../types';
 
-type ProjectSectionProps = { title: string; projects: Project[] };
+type ProjectSectionProps = { title: string; projects: Project[]; description?: ReactElement };
 
 export const ProjectsSection = React.forwardRef<HTMLElement | null, ProjectSectionProps>(function ProjectsSection(
-  { title, projects },
+  { title, projects, description },
   ref
 ) {
   return (
@@ -14,6 +14,7 @@ export const ProjectsSection = React.forwardRef<HTMLElement | null, ProjectSecti
         <header>
           <h2>{title}</h2>
         </header>
+        {description}
         <ProjectsContainer projects={projects} />
       </article>
     </section>
