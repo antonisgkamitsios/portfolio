@@ -1,6 +1,3 @@
-// import { useCallback, useLayoutEffect, useState } from 'react';
-
-// import { gsap } from 'gsap';
 import { useScrollTrigger } from '../hooks/useScrollTrigger';
 
 type ProjectsDescriptionProps = {
