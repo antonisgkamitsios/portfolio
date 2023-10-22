@@ -4,7 +4,7 @@ import { Main } from './components/Main';
 import { useCallback, useState } from 'react';
 
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
