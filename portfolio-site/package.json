@@ -4,20 +4,25 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "node server",
+    "build": "tsc && pnpm build:client && pnpm build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "pnpm run build && ntl deploy --prod --dir=dist"
+    "deploy": "pnpm run build && ntl deploy --prod --dir=dist",
+    "serve": "NODE_ENV=production node server"
   },
   "dependencies": {
     "@types/gsap": "^3.0.0",
+    "compression": "^1.7.4",
     "express": "^4.18.2",
     "gsap": "^3.12.2",
     "netlify-cli": "^16.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "serve-static": "^1.15.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

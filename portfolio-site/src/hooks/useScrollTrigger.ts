@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { gsap } from 'gsap';
 
@@ -21,7 +21,7 @@ export function useScrollTrigger<T extends HTMLElement>({
     }
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (element) {
       gsap
         .timeline({
