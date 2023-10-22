@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "node server",
     "build": "tsc && pnpm build:client && pnpm build:server",
+    "build:netlify": "vite build",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "pnpm run build && ntl deploy --prod --dir=dist",
+    "deploy": "pnpm run build:netlify && ntl deploy --prod --dir=dist",
     "serve": "NODE_ENV=production node server"
   },
   "dependencies": {
