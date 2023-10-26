@@ -13,6 +13,7 @@
     "preview": "vite preview",
     "deploy:netlify": "pnpm run build:netlify && ntl deploy --prod --dir=dist",
     "deploy": "pnpm build && rsync -avz -e ssh --delete --progress dist/ antonis@fsfe:/var/www/app/dist",
+    "deploy:docker": "(docker context create remote --docker host=ssh://antonis@fsfe && docker context  use remote && docker-compose up --build  --scale node-container=2 -d && docker context rm -f remote) || docker context rm -f remote",
     "serve": "NODE_ENV=production node server"
   },
   "dependencies": {
