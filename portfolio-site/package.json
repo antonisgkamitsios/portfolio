@@ -11,7 +11,8 @@
     "build:server": "vite build --outDir dist/server --ssr src/entry-server.tsx",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "pnpm run build:netlify && ntl deploy --prod --dir=dist",
+    "deploy:netlify": "pnpm run build:netlify && ntl deploy --prod --dir=dist",
+    "deploy": "pnpm build && rsync -avz -e ssh --delete --progress dist/ antonis@fsfe:/var/www/app/dist",
     "serve": "NODE_ENV=production node server"
   },
   "dependencies": {

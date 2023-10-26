@@ -9,7 +9,7 @@
     border-top: 2px solid v.$primaryBlueGrey;
     padding: Min(75px, Max(40px, math.div(75, 1920)*100vw)) 0;
     overflow: hidden;
-    
+
     .projects-description {
         margin-bottom: math.div(48, 16)*1em;
         text-align: left;
@@ -71,6 +71,7 @@
 
         &.hover {
             pointer-events: all;
+            outline: 10px;
         }
 
         a {
@@ -103,7 +104,11 @@
             transition: filter .3s linear;
         }
 
-        &:hover {
+
+
+
+        &:hover,
+        &:focus-within {
             img {
                 filter: blur(4px);
             }
@@ -112,6 +117,10 @@
                 transform: translateY(0);
 
             }
+        }
+
+        &:focus-within {
+            outline: 2px solid white;
         }
     }
 }
