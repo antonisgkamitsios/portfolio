@@ -1,43 +1,43 @@
 import { Project } from './types';
 
-import tyras from './assets/tyras.webp';
-import tyrasFallback from './assets/tyras.jpg';
+import tyras from '/images/tyras.webp';
+import tyrasFallback from '/images/tyras.jpg';
 
-import cenergy from './assets/cenergy.webp';
-import cenergyFallback from './assets/cenergy.jpg';
+import cenergy from '/images/cenergy.webp';
+import cenergyFallback from '/images/cenergy.jpg';
 
-import threeCents from './assets/threecents.webp';
-import threeCentsFallback from './assets/threecents.jpg';
+import threeCents from '/images/threecents.webp';
+import threeCentsFallback from '/images/threecents.jpg';
 
-import heron from './assets/heron.webp';
-import heronFallback from './assets/heron.jpg';
+import heron from '/images/heron.webp';
+import heronFallback from '/images/heron.jpg';
 
-import petropoulos from './assets/petropoulos.webp';
-import petropoulosFallback from './assets/petropoulos.jpg';
+import petropoulos from '/images/petropoulos.webp';
+import petropoulosFallback from '/images/petropoulos.jpg';
 
-import symbioPotential from './assets/connections-thumb.webp';
-import symbioPotentialFallback from './assets/connections-thumb.png';
+import symbioPotential from '/images/connections-thumb.webp';
+import symbioPotentialFallback from '/images/connections-thumb.png';
 
-import wasteAnalytics from './assets/wastemap-thumb.webp';
-import wasteAnalyticsFallback from './assets/wastemap-thumb.png';
+import wasteAnalytics from '/images/wastemap-thumb.webp';
+import wasteAnalyticsFallback from '/images/wastemap-thumb.png';
 
-import wasteBrokers from './assets/transports-thumb.webp';
-import wawasteBrokersFallback from './assets/transports-thumb.png';
+import wasteBrokers from '/images/transports-thumb.webp';
+import wawasteBrokersFallback from '/images/transports-thumb.png';
 
-import diadymaReuse from './assets/reuse-thumb.webp';
-import diadymaReuseFallback from './assets/reuse-thumb.png';
+import diadymaReuse from '/images/reuse-thumb.webp';
+import diadymaReuseFallback from '/images/reuse-thumb.png';
 
-import diadymaCookingoils from './assets/cookingoils-thumb.webp';
-import diadymaCookingoilsFallback from './assets/cookingoils-thumb.png';
+import diadymaCookingoils from '/images/cookingoils-thumb.webp';
+import diadymaCookingoilsFallback from '/images/cookingoils-thumb.png';
 
-import diadymaRewards from './assets/rewards-thumb.webp';
-import diadymaRewardsFallback from './assets/rewards-thumb.png';
+import diadymaRewards from '/images/rewards-thumb.webp';
+import diadymaRewardsFallback from '/images/rewards-thumb.png';
 
-import saveFood from './assets/savefood-thumb.webp';
-import saveFoodFallback from './assets/savefood-thumb.png';
+import saveFood from '/images/savefood-thumb.webp';
+import saveFoodFallback from '/images/savefood-thumb.png';
 
-import cemenergy from './assets/cemenergy-thumb.webp';
-import cemenergyFallback from './assets/cemenergy-thumb.png';
+import cemenergy from '/images/cemenergy-thumb.webp';
+import cemenergyFallback from '/images/cemenergy-thumb.png';
 
 export const projects: Project[] = [
   { title: 'Tyras', imgSrc: tyras, imgSrcFallback: tyrasFallback, href: 'https://www.tyras.gr/' },
