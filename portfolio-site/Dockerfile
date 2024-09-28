@@ -1,4 +1,4 @@
-FROM node:19-alpine
+FROM node:19-alpine as build
 
 # run npm global ass root
 RUN npm i -g pnpm
@@ -16,6 +16,15 @@ RUN pnpm install
 
 COPY --chown=node:node . .
 RUN pnpm build
+
+FROM node:19-alpine as serve
+
+USER node
+
+RUN mkdir /home/node/app
+WORKDIR  /home/node/app
+COPY --from=build --chown=node:node /home/node/app ./
+RUN rm -r src
 
 ENV NODE_ENV=production
 CMD [ "node", "server.js" ]
